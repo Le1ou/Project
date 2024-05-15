@@ -1,0 +1,78 @@
+@import '_variables';
+@import '_font';
+@import 'components/_header';
+@import 'components/_main-header';
+@import 'components/_main-info';
+@import 'components/_burger';
+@import 'components/_swiper';
+@import 'components/_last-swiper';
+@import 'components/_footer';
+@import 'components/_menu-form';
+@import 'components/_menu-call';
+@import 'components/_menu-order';
+@import 'components/_container';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'TT Lakes';
+  background-color: $nearly-white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: white;
+
+  &:hover {
+    transform: scale(1.15);
+  }
+}
+
+a {
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.15);
+  }
+}
+
+.divider
+{
+    width: 2px;
+    height: 32px;
+    background-color: #eaeaea;
+    border-radius: 1px;
+}
+
+@media (min-width: 1440px) {
+  body {
+    background: $nearly-white;
+  }
+
+  .burger {
+    display: flex;
+    min-width: 320px;
+    box-shadow: none;
+    position: sticky;
+  }
+}
+

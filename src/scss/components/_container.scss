@@ -1,0 +1,41 @@
+.container {
+  @media (min-width: 1440px) {
+  }
+
+  &__header {
+    @media (min-width: 1440px) {
+      padding-top: 42px;
+    }
+  }
+
+  &__main {
+    @media (min-width: 768px) {
+      padding: 0 24px;
+    }
+  }
+
+  &__slide {
+    padding: 16px 16px 0 16px;
+
+    @media (min-width: 768px) {
+      padding: 24px 24px 0 24px;
+    }
+  }
+}
+
+.container-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  padding: 24px 16px 126px;
+}
+
+.container-full {
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+  }
+}

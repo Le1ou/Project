@@ -1,0 +1,75 @@
+.menu-call {
+  display: none;
+  width: 320px;
+  height: 100vh;
+  background-color: $white;
+
+  @media (min-width: 1440px) {
+    width: 440px;
+    padding: 40px 32px;
+  }
+
+  &--open {
+    display: block;
+
+    &::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      right: 320px;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(8px);
+
+      @media (min-width:1440px) {
+        right: 440px;
+      }
+    }
+  }
+
+  &__btn {
+    @media (min-width: 1440px) {
+      position: absolute;
+      background-color: transparent;
+      top: 32px;
+      right: 477px;
+    }
+  }
+
+  &__text {
+    padding-top: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $grey-text;
+
+    span {
+      color: $red;
+    }
+  }
+
+  &__button {
+    padding: 19px 16px 0 152px;
+  }
+}
+
+  .title {
+    font-size: 24px;
+    letter-spacing: -0.6px;
+    height: 32px;
+    
+    @media (min-width: 1440px) {
+      margin-top: 0;
+    }
+
+    &::before {
+      content: "";
+      width: 4px;
+      height: 40px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-color: $acid;
+      position: absolute;
+      transform: translateY(-5px);
+      left: 0;
+    }
+  }

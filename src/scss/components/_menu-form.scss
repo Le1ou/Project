@@ -1,0 +1,30 @@
+.menu-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__input {
+    border: 1px solid $grey;
+    padding: 12px 16px;
+    border-radius: 8px;
+    height: 48px;
+
+    &::placeholder {
+      color: $grey;
+    }
+
+    &--textarea {
+      font-weight: 400;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid $grey;
+      height: 118px;
+      resize: none;
+
+      &::placeholder {
+        height: 48px;
+        color: $grey;
+      }
+    }
+  }
+}

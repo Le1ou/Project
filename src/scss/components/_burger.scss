@@ -1,0 +1,235 @@
+.burger
+{   
+  display: none;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background: #ffffff;
+  box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2), -2px 0 4px 0 rgba(69, 79, 126, 0.02);
+
+  @media (min-width: 361px) {
+    width: 320px;
+  }
+
+  &--open {
+    display: flex;
+    
+    &::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 320px;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(8px);
+
+      @media (max-width: 360px) {
+        backdrop-filter: none;
+      }
+    }
+  }
+}
+
+.burger-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18.59px 16px;
+
+  @media (width: 360px) {
+    padding: 18.59px 24px;
+  }
+
+  &__left {
+    display: flex;
+    gap: 16.73px;
+  }
+
+  &__right {
+    display: flex;;
+  }
+}
+
+.burger-main {
+  flex: 1 1 auto;
+
+  li:last-child {
+    margin-bottom: 10px;
+  }
+
+  li:first-child a{
+    color: $grey-text;
+  }
+
+  @media (min-width:1440px) {
+    li:first-child a {
+      color: inherit;
+
+      &:hover {
+        color: $red;
+        font-weight: 600;
+        transition: transform 1s ease;
+        transform: scale(1.5);
+      }
+    }
+
+    li:nth-child(2) a{
+      color: $grey-text;
+    }
+
+    li:first-child::before {
+      content: "";
+      display: none;
+    }
+
+    li:nth-child(2)::before {
+      content: "";
+      width: 4px;
+      height: 40px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-color: $acid;
+      position: absolute;
+      transform: translateY(-10px);
+      left: 0;
+    }
+  }
+  
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    li {
+      padding-left: 16px;
+      padding-bottom: 24px;
+
+      @media (width: 360px) {
+        padding-left: 24px;
+      } 
+      &:first-child::before {
+          content: "";
+          width: 4px;
+          height: 40px;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          background-color: $acid;
+          position: absolute;
+          transform: translateY(-10px);
+          left: 0;
+        }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    a {
+      font-size: 16px;
+      text-decoration: none;
+      color: $black;
+      font-weight: 500;
+      letter-spacing: -0.2px;
+      transition: color 1s ease-in-out;
+
+      &:hover {
+        color: $red;
+        font-weight: 600;
+        transition: transform 1s ease;
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+.burger-footer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+
+  @media (width: 360px) {
+    padding-left: 24px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+
+  &__list-img {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__mail {
+    line-height: 24px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+
+    a {
+      transition: color 1s ease-in-out;
+
+      &:hover {
+        color: $red;
+        font-weight: 600;
+        transition: transform 1s ease;
+        transform: scale(1.5);
+      }
+    }
+  }
+
+  &__number {
+    line-height: 32px;
+    font-size: 24px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+
+    a {
+      text-decoration: none;
+      color: $black;
+      font-weight: 900;
+      letter-spacing: -0.2px;
+      transition: color 1s ease-in-out;
+
+      &:hover {
+        color: $red;
+        transition: transform 1s ease;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__list-lang {
+    color: $black;
+    display: flex;
+    font-size: 16px;
+    gap: 7px;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+    margin-bottom: 32px;
+
+    a {
+      font-size: 16px;
+      text-decoration: none;
+      color: $black;
+      font-weight: 500;
+      letter-spacing: -0.2px;
+      transition: color 1s ease-in-out;
+
+      &:hover {
+        color: $red;
+        font-weight: 600;
+        transition: transform 1s ease;
+        transform: scale(1.5);
+      }
+    }
+  }
+}

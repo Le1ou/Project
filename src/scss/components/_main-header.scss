@@ -1,0 +1,131 @@
+.main-header {
+  &__container {
+    @media (min-width: 1440px) {
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $nearly-white;
+    }
+  }
+
+  &__container-title {
+    font-size: 28px;
+    height: 40px;
+    padding-left: 16px;
+
+    @media (min-width: 768px) {
+      padding-left: 24px;
+    }
+
+    @media (min-width: 1440px) {
+      padding-left: 32px;
+    }
+
+    &::before {
+      content: "";
+      width: 4px;
+      height: 40px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-color: $acid;
+      position: absolute;
+      transform: translateY(-3px);
+      left: 0;
+
+      @media (min-width: 1440px) {
+        left: 320px;
+      }
+    }
+  }
+
+  &__container-block {
+    cursor: pointer;
+    font-weight: 500;
+    display: none;
+
+    img {
+      transform: translateY(15px);
+      &:first-of-type {
+        @media (min-width: 1440px) {
+        margin-right: 32px;
+        }
+      }
+    }
+  }
+
+  &__container-list {
+    padding-left: 32px;
+    display: flex;
+    max-height: 83px;
+    overflow: auto;
+    padding-left: 16px;
+
+    @media (min-width: 768px) {
+      padding-left: 24px;
+    }
+
+    @media (min-width: 1440px) {
+      padding-left: 32px;
+      overflow-x: none;
+      flex-wrap: wrap;
+      background-color: $nearly-white;
+    }
+
+    a {
+      display:inline-block;
+      line-height: 24px;
+      text-align: center;
+      padding: 8px 25px;
+      text-decoration: none;
+      color: $grey-text;
+      font-size: 16px;
+      font-weight: 500;
+
+      @media (min-width: 1440px) {
+        padding: 8px 27px;
+      }
+
+      &:hover {
+        color: $red;
+        font-weight: 600;
+        transition: transform 0.3s ease;
+        transform: scale(1.2);
+      }
+    }
+
+    li {
+      max-height: 45px;
+      white-space: nowrap;
+
+      &:first-child {
+        border: 2px solid $acid-border;
+        border-radius: 5px;
+        background-color: $white;
+      }
+    }
+  }
+
+  &__container-block {
+    @media (min-width: 1440px) {
+      display: flex;
+      align-items: center;
+      padding-right: 32px;
+    }
+
+    a {
+      @media (min-width: 1440px) {
+        text-decoration: none;
+        color: $black;
+        margin-right: 8px;
+      }  
+    }
+  }
+
+  &__nav {
+    max-height: 45px;
+
+    @media (min-width: 1440px) {
+      max-height: 82px;
+    }
+  }
+}
